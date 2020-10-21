@@ -1,10 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Header = styled.h1`
+    font-size: 45px;
+`
+
 export interface MainProps {
     header: string;
 }
 
 export const Main = (props: MainProps) => (
-    <h1>
-        {props.header} Data Structures and Algorithms in Ruby
-    </h1>
+    <Header>{props.header}</Header>
 );
