@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
+import styled from 'styled-components';
 import { Main } from './components/Main';
 import { Navigation } from './components/Navigation';
-import styled from 'styled-components';
+import { Header } from './components/Header';
 
 const Divider = styled.div`
   display: grid;
@@ -17,7 +18,10 @@ function App() {
     <div className="App">
       <Divider>
         <Navigation button="Problems" />
-        <Main header="Welcome to Data Structures and Algorithms in Ruby"/>
+        <div>
+          <Header header="Welcome to Data Structures and Algorithms in Ruby" />
+          <Main />
+        </div>
       </Divider>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 const Container = styled.div`
     border-right: 1px dotted black;
@@ -22,10 +23,7 @@ export interface NavigationProps {
 export const Navigation = (props: NavigationProps) => (
     <Container>
         <Buttons>
-            {/* <Button>
-                <button>{props.button}</button>
-            </Button> */}
-            <Button>Home</Button>
+            <Button><Link to="/">Home</Link></Button>
             <Button>Data Structures</Button>
             <Button>Algorithms</Button>
             <Button>Interviews</Button>
