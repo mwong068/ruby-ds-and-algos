@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Main } from './components/Main';
 import { Navigation } from './components/Navigation';
-import { Header } from './components/Header';
+// import { Header } from './components/Header';
+import { DataStructures } from './components/Data Structures';
+import { Contact } from './components/Contact';
 
 const Divider = styled.div`
   display: grid;
@@ -21,9 +23,13 @@ function App() {
         <Divider>
           <Navigation button="Problems" />
           <div>
-            <Header header="Welcome to Data Structures and Algorithms in Ruby" />
-            <Route path="/" default={true} />
-            <Main />
+            {/* <Header header="Welcome to Data Structures and Algorithms in Ruby" /> */}
+            <Route path="/" default={true} exact={true} render={Main} />
+            <Route path="/datastructures" default={false} exact={true} render={DataStructures} />
+            <Route path="/algorithms" default={false} exact={true} />
+            <Route path="/interviews" default={false} exact={true} />
+            <Route path="/whyruby" default={false} exact={true} />
+            <Route path="/contact" default={false} exact={true} render={Contact} />
           </div>
         </Divider>
       </Router>
