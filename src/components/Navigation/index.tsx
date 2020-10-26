@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
     border-right: 1px dotted black;
@@ -17,18 +17,19 @@ const Button = styled.li`
 `
 
 export interface NavigationProps {
+    children?: any
     button: string;
 }
 
 export const Navigation = (props: NavigationProps) => (
     <Container>
         <Buttons>
-            <Button><Link to="/">Home</Link></Button>
-            <Button>Data Structures</Button>
-            <Button>Algorithms</Button>
-            <Button>Interviews</Button>
-            <Button>Why Ruby?</Button>
-            <Button>Contact</Button>
+            <Button><Link to="/" >Home</Link></Button>
+            <Button><Link to="/datastructures" >Data Structures</Link></Button>
+            <Button><Link to="/algorithms">Algorithms</Link></Button>
+            <Button><Link to="/interviews">Interviews</Link></Button>
+            <Button><Link to="/whyruby">Why Ruby?</Link></Button>
+            <Button><Link to="/contact">Contact</Link></Button>
         </Buttons>
     </Container>
 );

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import styled from 'styled-components';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Main } from './components/Main';
 import { Navigation } from './components/Navigation';
 import { Header } from './components/Header';
@@ -16,13 +17,16 @@ const Divider = styled.div`
 function App() {
   return (
     <div className="App">
-      <Divider>
-        <Navigation button="Problems" />
-        <div>
-          <Header header="Welcome to Data Structures and Algorithms in Ruby" />
-          <Main />
-        </div>
-      </Divider>
+      <Router>
+        <Divider>
+          <Navigation button="Problems" />
+          <div>
+            <Header header="Welcome to Data Structures and Algorithms in Ruby" />
+            <Route path="/" default={true} />
+            <Main />
+          </div>
+        </Divider>
+      </Router>
     </div>
   );
 }
