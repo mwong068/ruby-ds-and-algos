@@ -12,7 +12,7 @@ import { Contact } from './components/Contact';
 const Divider = styled.div`
   display: grid;
   grid-template-columns: 15% 85%;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Roboto Mono', monospace;
   height: 100vh;
 `
 

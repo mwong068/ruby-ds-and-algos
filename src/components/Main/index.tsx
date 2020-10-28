@@ -8,8 +8,8 @@ const Container = styled.div`
 
 const Header = styled.h1`
     font-size: 40px;
-    padding: 40px;
-    width: 50%;
+    padding: 30px;
+    // width: 40%;
     margin: auto;
 `
 
@@ -27,7 +27,11 @@ export interface MainProps {
 
 export const Main = (props: MainProps) => (
     <Container>
-        <Header>Welcome to Data Structures and Algorithms in Ruby</Header>
+        <Header>
+            Welcome to 
+            <br></br>Data Structures and Algorithms
+            <br></br>in Ruby
+        </Header>
         <MainText>
             <h2>Hi there!</h2>
             <h2>Glad you could make it :)</h2>
