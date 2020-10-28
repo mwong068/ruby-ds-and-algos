@@ -1,13 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Container = styled.div`
+    display: grid;
+    margin: auto;
+`
+
 const Header = styled.h1`
-    font-size: 45px;
+    font-size: 40px;
+    padding: 40px;
+    width: 50%;
+    margin: auto;
 `
 
 const MainText = styled.div`
     width: 70%;
-    margin-left: 170px;
+    margin: auto;
+    h2 {
+        font-size: 20px;
+    }
 `
 
 export interface MainProps {
@@ -15,7 +26,7 @@ export interface MainProps {
 }
 
 export const Main = (props: MainProps) => (
-    <div>
+    <Container>
         <Header>Welcome to Data Structures and Algorithms in Ruby</Header>
         <MainText>
             <h2>Hi there!</h2>
@@ -24,6 +35,6 @@ export const Main = (props: MainProps) => (
             <h2>So please take a look around and if you notice anything could use correcting, go ahead and shoot me an email. All contact info can be found in the contact tab.</h2>
             <h2>Thanks for stopping by! Enjoy your stay.</h2>
         </MainText>
-    </div>
+    </Container>
     // <Header>{props.header}</Header>
 );
