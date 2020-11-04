@@ -5,8 +5,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Main } from './components/Main';
 import { Navigation } from './components/Navigation';
 // import { Header } from './components/Header';
+import { Interviews } from './components/Interviews';
 import { Algorithms } from './components/Algorithms';
 import { DataStructures } from './components/Data Structures';
+import { Ruby } from './components/Ruby';
 import { Contact } from './components/Contact';
 
 const Divider = styled.div`
@@ -27,8 +29,8 @@ function App() {
             <Route path="/" default={true} exact={true} render={Main} />
             <Route path="/datastructures" default={false} exact={true} render={DataStructures} />
             <Route path="/algorithms" default={false} exact={true} render={Algorithms} />
-            <Route path="/interviews" default={false} exact={true} />
-            <Route path="/whyruby" default={false} exact={true} />
+            <Route path="/interviews" default={false} exact={true} render={Interviews} />
+            <Route path="/whyruby" default={false} exact={true} render={Ruby} />
             <Route path="/contact" default={false} exact={true} render={Contact} />
           </div>
         </Divider>
