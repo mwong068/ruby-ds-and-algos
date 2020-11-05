@@ -6,12 +6,12 @@ const Header = styled.h1`
 `
 
 export interface MainProps {
-    header: string;
+    // header: string;
 }
 
 export const Interviews = (props: MainProps) => (
     <div>
-        <Header>Data Structures</Header>
+        <Header>Interviews</Header>
     </div>
     // <Header>{props.header}</Header>
 );
