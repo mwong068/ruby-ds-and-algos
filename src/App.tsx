@@ -10,6 +10,7 @@ import { Algorithms } from './components/Algorithms';
 import { DataStructures } from './components/Data Structures';
 import { Ruby } from './components/Ruby';
 import { Contact } from './components/Contact';
+import { Arrays } from './components/Data Structures/Arrays';
 
 const Divider = styled.div`
   display: grid;
@@ -32,6 +33,7 @@ function App() {
             <Route path="/interviews" default={false} exact={true} render={Interviews} />
             <Route path="/whyruby" default={false} exact={true} render={Ruby} />
             <Route path="/contact" default={false} exact={true} render={Contact} />
+            <Route path="/datastructures/arrays" default={false} exact={true} render={Arrays} />
           </div>
         </Divider>
       </Router>
